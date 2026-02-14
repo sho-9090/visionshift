@@ -205,7 +205,7 @@ async function analyzeAndSuggest() {
 }
 
 async function refineVision(input: string) {
-  const apiKey = process.env.API_KEY;
+  import.meta.env.VITE_GEMINI_API_KEY
   if (!apiKey) {
     showStatus("API Key missing", true);
     return;
