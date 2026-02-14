@@ -169,7 +169,7 @@ async function handleFile(file: File) {
  * Proactively helps the user by suggesting 3 transformations for the uploaded image.
  */
 async function analyzeAndSuggest() {
-  const apiKey = process.env.API_KEY;
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
   if (!apiKey || !base64Image) return;
 
   aiSuggestionsPanel.classList.add("hidden");
