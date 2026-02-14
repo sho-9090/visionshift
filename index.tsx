@@ -232,7 +232,7 @@ async function refineVision(input: string) {
 }
 
 async function executeShift(prompt: string) {
-  const apiKey = process.env.API_KEY;
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
   if (!apiKey) {
     showStatus("API Key missing", true);
     return;
